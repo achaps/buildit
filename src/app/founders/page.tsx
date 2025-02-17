@@ -15,6 +15,7 @@ export default function FoundersPage() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const triggerConfetti = () => {
     confetti({
