@@ -31,14 +31,17 @@ export default function BuildersPage() {
       const result = await saveEmailToWaitlist(email, 'builder')
       if (result.success) {
         setError(false);
+        setErrorMessage("");
         setIsRegistered(true);
         setShowInput(false);
         triggerConfetti();
       } else {
         setError(true);
+        setErrorMessage(result.error as string);
       }
     } else {
       setError(true);
+      setErrorMessage("Please enter a valid email address");
     }
   };
 
@@ -68,8 +71,10 @@ export default function BuildersPage() {
                 <div className="flex items-center rounded-full border border-border bg-background/80 backdrop-blur-sm p-2 shadow-sm">
                   <div className="flex -space-x-2">
                     {[3, 4, 5, 6].map((num) => (
-                      <img
+                      <Image
                         key={num}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 rounded-full ring-2 ring-background"
                         src={`https://originui.com/avatar-80-0${num}.jpg`}
                         alt={`Avatar ${num}`}
@@ -85,7 +90,7 @@ export default function BuildersPage() {
               {isRegistered ? (
                 <div className="flex flex-col items-center gap-4">
                   <RainbowButton variant="success" className="gap-2 cursor-default">
-                    You're registered! <Mail className="w-4 h-4" />
+                    You&apos;re registered! <Mail className="w-4 h-4" />
                   </RainbowButton>
                   <div className="flex items-center gap-2 rounded-full bg-black text-white px-4 py-2">
                     <p className="text-sm">
@@ -135,7 +140,7 @@ export default function BuildersPage() {
                     </button>
                   </div>
                   {error && (
-                    <p className="text-red-500 text-sm">Please enter a valid email address</p>
+                    <p className="text-red-500 text-sm">{errorMessage}</p>
                   )}
                 </div>
               )}
