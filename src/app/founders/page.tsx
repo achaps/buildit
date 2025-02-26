@@ -9,6 +9,7 @@ import confetti from "canvas-confetti";
 import Image from "next/image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { saveEmailToWaitlist } from "@/lib/actions";
+import Link from 'next/link';
 
 export default function FoundersPage() {
   const [showInput, setShowInput] = useState(false);
@@ -50,6 +51,16 @@ export default function FoundersPage() {
     <AuroraBackground>
       <div className="w-full min-h-screen">
         <div className="container relative mx-auto">
+          {/* Logo en haut à gauche */}
+          <div className="absolute top-8 left-8 z-10">
+            <Image
+              src="/logo-black.png"
+              alt="Buildr Network Logo"
+              width={120}
+              height={40}
+              className="w-[80px] md:w-[120px] h-auto"
+            />
+          </div>
           <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col w-full">
             <div>
               <Button variant="secondary" size="sm" className="gap-4">
@@ -98,12 +109,16 @@ export default function FoundersPage() {
                   <RainbowButton variant="success" className="gap-2 cursor-default">
                     You&apos;re registered! <Mail className="w-4 h-4" />
                   </RainbowButton>
-                  <div className="flex items-center gap-2 rounded-full bg-black text-white px-4 py-2">
+                  <Link 
+                    href="https://x.com/buildr_network"
+                    target="_blank"
+                    className="flex items-center gap-2 rounded-full bg-black text-white px-4 py-2 hover:opacity-90 transition-opacity"
+                  >
                     <p className="text-sm">
                       Join us on <span className="font-semibold">X</span> and get rewarded 👀
                     </p>
                     <MoveRight className="w-4 h-4" />
-                  </div>
+                  </Link>
                 </div>
               ) : !showInput ? (
                 <RainbowButton className="gap-2" onClick={() => setShowInput(true)}>
@@ -156,13 +171,15 @@ export default function FoundersPage() {
           </div>
           {/* Twitter logo in the corner */}
           <div className="fixed bottom-8 right-8">
-            <Image
-              src="/twitter.png"
-              alt="Twitter/X Logo"
-              width={32}
-              height={32}
-              className="opacity-50 hover:opacity-100 transition-opacity"
-            />
+            <Link href="https://x.com/buildr_network" target="_blank">
+              <Image
+                src="/twitter.png"
+                alt="Twitter/X Logo"
+                width={32}
+                height={32}
+                className="opacity-50 hover:opacity-100 transition-opacity"
+              />
+            </Link>
           </div>
         </div>
       </div>
