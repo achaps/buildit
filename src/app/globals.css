@@ -82,6 +82,11 @@ body {
 }
 
 @layer utilities {
+  .aurora-fill {
+    color: transparent;
+    fill: url(#aurora-gradient);
+  }
+
   .aurora-text {
     background: repeating-linear-gradient(
       100deg,
@@ -95,12 +100,25 @@ body {
     background-clip: text;
     color: transparent;
     background-size: 200% auto;
-    animation: aurora 22s linear infinite;
+    animation: aurora 20s linear infinite;
   }
 
   @keyframes aurora {
     to {
       background-position: 200% center;
     }
+  }
+
+  .aurora-bg {
+    background: repeating-linear-gradient(
+      100deg,
+      var(--rose-500) 10%,
+      var(--orange-300) 15%,
+      var(--rose-300) 20%,
+      var(--orange-200) 25%,
+      var(--rose-400) 30%
+    );
+    background-size: 2000% auto;
+    animation: aurora 150s linear infinite;
   }
 }
