@@ -120,7 +120,7 @@ export function BuildrCard({ variant }: CardProps) {
     <Card 
       className={`backdrop-blur-sm ${isWhite ? 'bg-white/80' : 'bg-white'} border-white w-[400px] h-[290px] overflow-hidden shadow-lg transition-transform duration-200 ease-out cursor-pointer`}
       onMouseMove={handleMouseMove}
-      onMouseLeave={(e) => {
+      onMouseLeave={() => {
         handleMouseLeave();
         setIsHovered(false);
       }}

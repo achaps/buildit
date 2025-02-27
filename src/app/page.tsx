@@ -52,7 +52,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex flex-col gap-4">
                     <p className="text-lg md:text-xl italic font-semibold text-muted-foreground">
-                      "Make venture creation efficient, user-funded, community-driven and aligned with ALL stakeholders interests"
+                    `&quot;`Make venture creation efficient, user-funded, community-driven and aligned with ALL stakeholders interests`&quot;`
                     </p>
                     <div className="self-end">
                       <Image
