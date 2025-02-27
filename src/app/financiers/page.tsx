@@ -51,15 +51,17 @@ export default function FoundersPage() {
     <AuroraBackground>
       <div className="w-full min-h-screen">
         <div className="container relative mx-auto">
-          {/* Logo en haut à gauche */}
+          {/* Logo en haut à gauche avec lien */}
           <div className="absolute top-8 left-8 z-10">
-            <Image
-              src="/logo-black.png"
-              alt="Buildr Network Logo"
-              width={120}
-              height={40}
-              className="w-[80px] md:w-[120px] h-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/logo-black.png"
+                alt="Buildr Network Logo"
+                width={120}
+                height={40}
+                className="w-[80px] md:w-[120px] h-auto cursor-pointer hover:opacity-80 transition-opacity"
+              />
+            </Link>
           </div>
           <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col w-full">
             <div>
