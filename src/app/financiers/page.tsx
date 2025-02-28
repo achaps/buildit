@@ -11,7 +11,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { saveEmailToWaitlist } from "@/lib/actions";
 import Link from 'next/link';
 
-export default function FoundersPage() {
+export default function FinanciersPage() {
   const [showInput, setShowInput] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
@@ -30,7 +30,7 @@ export default function FoundersPage() {
   const validateAndSubmitEmail = async () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (emailRegex.test(email)) {
-      const result = await saveEmailToWaitlist(email, "founder");
+      const result = await saveEmailToWaitlist(email, "financier");
       if (result.success) {
         setError(false);
         setErrorMessage("");
@@ -63,30 +63,26 @@ export default function FoundersPage() {
               />
             </Link>
           </div>
-          <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col w-full">
+          <div className="flex gap-8 py-10 lg:py-20 items-center justify-center flex-col w-full">
             <div>
               <Button variant="secondary" size="sm" className="gap-4">
                 Read our Roadmap <MoveRight className="w-4 h-4" />
               </Button>
             </div>
             <div className="flex gap-4 flex-col">
-              <h1 className="text-5xl md:text-7xl max-w-3xl tracking-tighter text-center">
-                <span className="block text-spektr-cyan-50">
-                  Grow your Ecosystem at
-                </span>
-                <span className="block font-semibold">Lightning Speed</span>
+              <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center">
+                <span className="block text-spektr-cyan-50">Grow your Ecosystem</span>
+                <span className="block font-semibold">at Lightning Speed</span>
               </h1>
               <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-                Hackathon-like platform on auto pilot. Give your instructions and let
-                Builders create your next dApp
-              </p>
+              Join the first platform that incentive Founders, Builders & Users. Submit your project, get MVPs & an active user-base from Day 1</p>
             </div>
             <div className="flex flex-col gap-4 items-center">
               {/* Avatar group */}
               {!isRegistered && (
                 <div className="flex items-center rounded-full border border-border bg-background/80 backdrop-blur-sm p-2 shadow-sm">
                   <div className="flex -space-x-2">
-                    {[3, 8, 7, 1].map((num) => (
+                    {[3, 4, 5, 6].map((num) => (
                       <Image
                         key={num}
                         width={24}
@@ -98,11 +94,7 @@ export default function FoundersPage() {
                     ))}
                   </div>
                   <p className="pl-3 text-sm text-muted-foreground">
-                    Already more than{" "}
-                    <strong className="font-medium text-foreground">
-                      500+ builders
-                    </strong>{" "}
-                    ready to ship
+                  <strong className="font-medium text-foreground"> +200 </strong> Builders ready to give life to your projects
                   </p>
                 </div>
               )}
@@ -124,7 +116,7 @@ export default function FoundersPage() {
                 </div>
               ) : !showInput ? (
                 <RainbowButton className="gap-2" onClick={() => setShowInput(true)}>
-                  Join Beta <Mail className="w-4 h-4" />
+                  Join Waitlist <Mail className="w-4 h-4" />
                 </RainbowButton>
               ) : (
                 <div className="flex flex-col items-center gap-2">
@@ -171,7 +163,45 @@ export default function FoundersPage() {
               )}
             </div>
           </div>
-          {/* Twitter logo in the corner */}
+          
+          {/* How it works section */}
+          <div id="how-it-works" className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
+              </h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/how-it-works.png"
+                alt="How it works"
+                width={1200}
+                height={1000}
+                className="w-[80%] h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Why Buildr section */}
+          <div className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/why-buildr.png"
+                alt="Why Buildr"
+                width={1200}
+                height={1000}
+                className="w-[80%] h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Twitter logo en bas à droite */}
           <div className="fixed bottom-8 right-8">
             <Link href="https://x.com/buildr_network" target="_blank">
               <Image

@@ -62,7 +62,7 @@ export default function BuildersPage() {
               />
             </Link>
           </div>
-          <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col w-full">
+          <div className="flex gap-8 py-10 lg:py-20 items-center justify-center flex-col w-full">
             <div>
               <Button variant="secondary" size="sm" className="gap-4">
                 Read our Roadmap<MoveRight className="w-4 h-4" />
@@ -75,7 +75,7 @@ export default function BuildersPage() {
               </h1>
 
               <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-                Our platform connects Founders and Builders in a unique way, making sure every submitted project is rewarded
+                Our platform connects Founders, Builders & Users in a unique way, making sure every submitted project is rewarded
               </p>
             </div>
             <div className="flex flex-col gap-4 items-center">
@@ -164,6 +164,43 @@ export default function BuildersPage() {
             </div>
           </div>
           
+          {/* How it works section */}
+          <div id="how-it-works" className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
+              </h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/how-it-works.png"
+                alt="How it works"
+                width={1200}
+                height={1000}
+                className="w-[80%] h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Why Buildr section */}
+          <div className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/why-buildr.png"
+                alt="Why Buildr"
+                width={1200}
+                height={1000}
+                className="w-[80%] h-auto"
+              />
+            </div>
+          </div>
+
           {/* Twitter logo en bas à droite */}
           <div className="fixed bottom-8 right-8">
             <Link href="https://x.com/buildr_network" target="_blank">

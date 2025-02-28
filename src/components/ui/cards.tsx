@@ -92,8 +92,10 @@ export function BuildrCard({ variant }: CardProps) {
   const handleClick = () => {
     if (variant === 'builders') {
       router.push('/builders');
-    } else if (variant === 'financiers') {
+    } if (variant === 'financiers') {
       router.push('/financiers');
+    } else if (variant === 'community') {
+      router.push('/community');
     }
   };
 

@@ -1,6 +1,6 @@
 import { supabase } from './supabase'
 
-export async function saveEmailToWaitlist(email: string, type: 'builder' | 'founder') {
+export async function saveEmailToWaitlist(email: string, type: 'builder' | 'financier' | 'community') {
   try {
     const { error } = await supabase
       .from('waitlist')
