@@ -10,7 +10,7 @@ import Image from "next/image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { saveEmailToWaitlist } from '@/lib/actions'
 import Link from 'next/link';
-
+import { Card } from "@/components/ui/card";
 export default function BuildersPage() {
   const [showInput, setShowInput] = useState(false);
   const [email, setEmail] = useState("");
@@ -163,11 +163,52 @@ export default function BuildersPage() {
               )}
             </div>
           </div>
-          
+
+          {/* Testimonail section */}
+          <div className="w-full max-w-3xl mx-auto mt-20">
+              <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
+              <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
+              Never build for free again.  
+              </h2>
+              <h2 className="text-3xl md:text-3xl font-semibold text-left mb-12 px-4">
+             Our incentive program <span className="aurora-text">rewards Builders for their work</span> whether you get the #1 spot or not.  
+              </h2>
+                <div className="flex items-center flex flex-col gap-">
+                  <div className="flex flex-col gap-4">
+                    <li>
+                      <span className="font-semibold">As long as the project is validated by the community, you&apos;ll earn pBUILDR</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">Accumulate pBUILDR and get higher roles to unlock new projects & rewards</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">Convert your points into $BUILDR, allowing you to stake or get equity in projects</span>
+                    </li>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
           {/* How it works section */}
           <div id="how-it-works" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
               <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/builders-how-to.png"
+                alt="How it works"
+                width={1200}
+                height={1000}
+                className="w-[80%] h-auto"
+              />
+            </div>
+          </div>
+          
+          {/* Ecosystem section */}
+          <div id="how-it-works" className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
             </div>
             <div className="flex justify-center w-full">
               <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">

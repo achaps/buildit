@@ -234,7 +234,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Nouvelle section avec titre et testimonial */}
+            {/* Testimonail section */}
             <div className="w-full max-w-3xl mx-auto mt-40">
               <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
               <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
@@ -473,7 +473,7 @@ export default function HomePage() {
             {/* How it works section */}
             <div id="how-it-works" className="w-full mx-auto mt-20">
               <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> How it Works ?</h2>
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> How it works ?</h2>
               </div>
               <div className="flex justify-center w-full">
                 <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
@@ -493,7 +493,7 @@ export default function HomePage() {
               {/* Why Buildr section */}
               <div className="w-full mx-auto mt-20">
               <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> Why Builr is Better  ?</h2>
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> Why Buildr is Better  ?</h2>
               </div>
               <div className="flex justify-center w-full">
                 <Image 
