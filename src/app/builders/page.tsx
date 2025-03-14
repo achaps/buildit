@@ -164,7 +164,7 @@ export default function BuildersPage() {
             </div>
           </div>
 
-          {/* Testimonail section */}
+          {/* Card section */}
           <div className="w-full max-w-3xl mx-auto mt-20">
               <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
               <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
@@ -200,7 +200,7 @@ export default function BuildersPage() {
                 alt="How it works"
                 width={1200}
                 height={1000}
-                className="w-[80%] h-auto"
+                className="w-[90%] md:w-[70%] h-auto"
               />
             </div>
           </div>

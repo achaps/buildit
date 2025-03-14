@@ -10,6 +10,7 @@ import Image from "next/image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { saveEmailToWaitlist } from "@/lib/actions";
 import Link from 'next/link';
+import { Card } from "@/components/ui/card";
 
 export default function FinanciersPage() {
   const [showInput, setShowInput] = useState(false);
@@ -163,11 +164,60 @@ export default function FinanciersPage() {
               )}
             </div>
           </div>
+
+          {/* Card section */}
+          <div className="w-full max-w-3xl mx-auto mt-20">
+              <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
+              <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
+              Launching a project has never been easier.  
+              </h2>
+              <h2 className="text-3xl md:text-3xl font-semibold text-left mb-12 px-4">
+            Share your vision, let top tier <span className="aurora-text"> Builders </span> craft it for you & get your first <span className="aurora-text"> User-Base</span> 
+              </h2>
+                <div className="flex items-center flex flex-col gap-">
+                  <div className="flex flex-col gap-4">
+                    <li>
+                      <span className="font-semibold">Post your project, set a timelimit & get as many MVPs as you want</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">Day 1 Community involvement from selecting Builders to actively growing your project</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">Buildr&apos;s Incubator skyrocket your project with 1:1 mentorship & continuous support</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">No upfront costs, winning team gets equity + a fixed reward</span>
+                    </li>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            {/* PoC section */}
+          <div id="poc" className="w-full mx-auto mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Proof of Concept</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-16 px-4 max-w-4xl">
+                The<span className="aurora-text"> 0x </span>Foundation wants to launch a DEX : 
+              </h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <Image 
+                src="/financier-PoC.png"
+                alt="Financiers PoC"
+                width={1000}
+                height={1000}
+                className="w-[90%] md:w-[70%] h-auto"
+              />
+            </div>
+          </div>
           
-          {/* How it works section */}
+          {/* Ecosystem section */}
           <div id="how-it-works" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
             </div>
             <div className="flex justify-center w-full">
               <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
