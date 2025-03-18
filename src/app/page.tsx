@@ -59,11 +59,11 @@ export default function HomePage() {
           {/* Navigation Menu */}
           <div className="flex justify-center w-full mt-10">
             <nav className="backdrop-blur-md bg-white/80 rounded-full border border-white/20 shadow-lg -mt-2">
-              <ul className="flex items-center gap-1 p-1.5 text-[13px] sm:text-sm">
+              <ul className="flex items-center gap-1 p-1.5 text-[13px] sm:text-base">
                 <li>
                   <Link 
                     href="/builders"
-                    className="px-3 py-1.5 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
                   >
                     Builders
                   </Link>
@@ -71,7 +71,7 @@ export default function HomePage() {
                 <li>
                   <Link 
                     href="/financiers"
-                    className="px-3 py-1.5 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
                   >
                     Financiers
                   </Link>
@@ -79,31 +79,23 @@ export default function HomePage() {
                 <li>
                   <Link 
                     href="/community"
-                    className="px-3 py-1.5 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
                   >
                     Community
                   </Link>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="px-3 py-1.5 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
-                  >
-                    How it Works
-                  </button>
                 </li>
                 <li className="ml-1">
                   <Link 
                     href="https://x.com/buildr_network"
                     target="_blank"
-                    className="flex items-center px-2 py-1.5"
+                    className="flex items-center px-2 py-1.5 sm:px-3 sm:py-2"
                   >
                     <Image
                       src="/twitter.png"
                       alt="Twitter"
                       width={16}
                       height={16}
-                      className="opacity-70 hover:opacity-100 transition-opacity"
+                      className="opacity-70 hover:opacity-100 transition-opacity w-4 h-4 sm:w-5 sm:h-5"
                     />
                   </Link>
                 </li>

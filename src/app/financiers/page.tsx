@@ -66,9 +66,11 @@ export default function FinanciersPage() {
           </div>
           <div className="flex gap-8 py-10 lg:py-20 items-center justify-center flex-col w-full">
             <div>
-              <Button variant="secondary" size="sm" className="gap-4">
-                Read our Roadmap <MoveRight className="w-4 h-4" />
-              </Button>
+              <Link href="/docs">
+                <Button variant="secondary" size="sm" className="gap-2 text-xs md:text-sm whitespace-nowrap px-3 py-1.5">
+                  Project Overview<MoveRight className="w-3 h-3" />
+                </Button>
+              </Link>
             </div>
             <div className="flex gap-4 flex-col">
               <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center">
@@ -174,7 +176,7 @@ export default function FinanciersPage() {
               <h2 className="text-3xl md:text-3xl font-semibold text-left mb-12 px-4">
             Share your vision, let top tier <span className="aurora-text"> Builders </span> craft it for you & get your first <span className="aurora-text"> User-Base</span> 
               </h2>
-                <div className="flex items-center flex flex-col gap-">
+                <div className="flex items-center flex flex-col gap-4">
                   <div className="flex flex-col gap-4">
                     <li>
                       <span className="font-semibold">Post your project, set a timelimit & get as many MVPs as you want</span>
@@ -220,7 +222,7 @@ export default function FinanciersPage() {
               <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
             </div>
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+              <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-16 px-4 max-w-4xl">
                 Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
               </h2>
             </div>
@@ -230,7 +232,7 @@ export default function FinanciersPage() {
                 alt="How it works"
                 width={1200}
                 height={1000}
-                className="w-[80%] h-auto"
+                className="w-[90%] md:w-[70%] h-auto"
               />
             </div>
           </div>
@@ -246,7 +248,7 @@ export default function FinanciersPage() {
                 alt="Why Buildr"
                 width={1200}
                 height={1000}
-                className="w-[80%] h-auto"
+                className="w-[90%] md:w-[70%] h-auto"
               />
             </div>
           </div>

@@ -64,9 +64,11 @@ export default function BuildersPage() {
           </div>
           <div className="flex gap-8 py-10 lg:py-20 items-center justify-center flex-col w-full">
             <div>
-              <Button variant="secondary" size="sm" className="gap-4">
-                Read our Roadmap<MoveRight className="w-4 h-4" />
-              </Button>
+              <Link href="/docs">
+                <Button variant="secondary" size="sm" className="gap-2 text-xs md:text-sm whitespace-nowrap px-3 py-1.5">
+                  Project Overview<MoveRight className="w-3 h-3" />
+                </Button>
+              </Link>
             </div>
             <div className="flex gap-4 flex-col">
               <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center">
