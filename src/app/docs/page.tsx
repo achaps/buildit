@@ -29,7 +29,6 @@ import {
   Code,
   PiggyBank,
   FileText,
-  Brain,
   Briefcase
 } from "lucide-react";
 import Image from "next/image";
@@ -57,6 +56,7 @@ interface DocsSidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   onSectionChange: (sectionId: string) => void;
   expandedSections: string[];
   onToggleSection: (sectionId: string) => void;
+  setIsOpen: (open: boolean) => void;
 }
 
 export default function DocsPage() {
@@ -97,9 +97,9 @@ Buildr connects three essential actors in a smart ecosystem that transforms how 
 
  • Allowing them to never build for free again, we reinvented Hackathons 
  • Getting rewarded in tokens and equity for every project they build
- • Becoming the next generation of Web3 builders
+ • Becoming the next generation of Web3 architects
 
-<strong>Community (organized as a DAO including users, technical professionals, investors, AI agents)</strong>
+<strong>Community (organized as a DAO including users, technical professionals, investors)</strong>
 
  • Becoming insiders and getting early access to projects 
  • Allowing investement opportunities in promissing projects with no minimum entry barrier
@@ -127,12 +127,21 @@ This results in wasted financial resources, difficulty scaling for Ventures, and
           icon: Handshake,
           content: `<strong>Buildr provides a comprehensive solution that addresses the key challenges in Web3 project development:</strong>
 
-• AI-powered project evaluation and validation
 • Transparent blockchain governance
 • Incentivized collaboration between all stakeholders
 • Comprehensive incubator services
 • Community-driven project development
-• Fair and transparent reward distribution`
+• Fair and transparent reward distribution
+
+<div className="my-8 flex justify-center">
+  <Image
+    src="/why-buildr.png"
+    alt="Why choose Buildr"
+    width={800}
+    height={400}
+    className="rounded-lg shadow-lg w-full sm:w-auto"
+  />
+</div>`
         },
       ],
     },
@@ -145,7 +154,9 @@ This results in wasted financial resources, difficulty scaling for Ventures, and
           title: "Financiers", 
           id: "financiers", 
           icon: Wallet,
-          content: `<strong>Who?</strong>
+          content: `Our platform transforms how capital flows into Web3 projects, creating a transparent ecosystem where all financiers operate on a level playing field. BUILDR eliminates traditional gatekeeping mechanisms while providing unprecedented visibility into the entire development lifecycle.
+          
+<strong>Who?</strong>
 
 • Founders: Existing project teams or individuals aiming to expand their token ecosystem
 • KOLs: Influential figures with substantial communities and robust distribution capabilities
@@ -163,7 +174,9 @@ This results in wasted financial resources, difficulty scaling for Ventures, and
           title: "Builders", 
           id: "builders", 
           icon: Building2,
-          content: `<strong>Who?</strong>
+          content: `BUILDR addresses the critical challenges facing technical talent in today's fragmented ecosystem, creating clear pathways to project ownership and market success. BUILDR bridges the gap between technical capability and commercial viability, ensuring builders can focus on what they do best.
+        
+  <strong>Who?</strong>
 
 Technical talent capable of turning ideas into functional blockchain projects:
 • Developers
@@ -183,13 +196,14 @@ Technical talent capable of turning ideas into functional blockchain projects:
           title: "Community (DAO)", 
           id: "community", 
           icon: Users,
-          content: `<strong>Who?</strong>
+          content: `BUILDR activates the Community through a sophisticated DAO structure that transforms passive users into active participants with real ownership stakes. By bringing together everyday users, technical professionals, and investors, our platform creates a powerful collective intelligence network that validates and strengthens projects throughout their lifecycle. BUILDR democratizes access to equity opportunities while harnessing the wisdom of the crowd to drive project success.
+          
+<strong>Who?</strong>
 
 Organized as a DAO, including:
 • Everyday users eager to test and engage with dApps
 • Technical professionals providing detailed feedback
 • Investors participating in building processes
-• AI agents evaluating project potential
 
 <strong>Why?</strong>
 
@@ -216,51 +230,37 @@ Organized as a DAO, including:
 • Time constraints
 • Maximum Builder participation
 • Rewards structure
-• Equity allocation`
+• Equity allocation
+
+Every submission is reviewed by the platform (acceptation delay 24h-48h).`
         },
         { 
-          title: "AI-Powered Project Evaluation", 
-          id: "ai-evaluation", 
-          icon: Brain,
-          content: `<strong>AI agent evaluation considers:</strong>
-
-• Historical success of Financiers
-• Social media performance
-• Current market trends
-• Blockchain market health
-• Innovative potential
-• Economic viability
-• Benchmarking against similar solutions
-
-<strong>AI-driven pre-valuation provides:</strong>
-
-• Initial financial visibility
-• Community funding pool options
-• DAO validation through governance
-• Secondary evaluation upon launch`
-        },
-        { 
-          title: "Community Involvement & Governance", 
+          title: "Governance",
+          displayTitle: "Community Involvement & Governance", 
           id: "community-governance", 
           icon: Scale,
-          content: `<strong>Community integrated into selection and validation:</strong>
+          content: `BUILDR places the Community at the heart of project governance through a sophisticated DAO structure that gives members decisive power at every stage of development. From initial project selection to final validation, community consensus drives the platform's decision-making processes.<br></br>This revolutionary approach ensures projects succeed based on genuine user demand rather than insider connections, while transparent reward distribution and post-launch governance mechanisms create sustainable alignment between all stakeholders.
+          
+<strong>Community integrated into selection and validation:</strong>
 
 • DAO-curated selection shortlist
 • Community-driven reviews
 • Technical and functional testing
-• Post-selection procedures
 • Community-driven final validation
-• Transparent reward distribution`
+• Transparent reward distribution
+• Post-launch governance`
         },
         { 
           title: "Investment Pool Mechanics", 
           id: "investment-pool", 
           icon: PiggyBank,
-          content: `<strong>Optional investment pool mechanisms:</strong>
+          content: `Every DAO selected Builders team will be able to create an investment pool, with a ICO. The investement pool will represent 10% of the total supply of the project. <br></br>It's important to dissociate the investment pool from the Financiers project tokenomics, the investment pool is a separate entity that gives the opportunity to visionary investors to exchange investement tokens for project tokens at a later date.
+          
+<strong>Early investement opportunity: </strong>
 
-• Community investors secure future project rewards
-• Flexible locking conditions
-• Pre-launch investor flexibility
+• No minimum investment
+• Early exposition based on the Builders vision
+• Guaranteed rewards for winning projects investors
 • Secure escrow management
 • Transparent fund tracking`
         },
@@ -275,7 +275,9 @@ Organized as a DAO, including:
           title: "Services & Responsibilities", 
           id: "services", 
           icon: Briefcase,
-          content: `<strong>Central to the Buildr ecosystem, the incubator ensures:</strong>
+          content: `Buildr Incubator is a dedicated program designed to support and scale the best projects. It offers a range of services and resources to help Builders and Financiers refine their ideas, build long-term venures, and allocate resources efficiently. Our number one priority is to skyrocket projects to massive adoption, allowing all our ecosystem to thrive. Work hard, scale fast, win bigger. 
+
+          <strong>Central to the Buildr ecosystem, the incubator ensures:</strong>
 
 • Transparent reward and equity distribution
 • Rigorous growth-related fund-tracking
@@ -287,7 +289,9 @@ Organized as a DAO, including:
           title: "Strategic Partnerships", 
           id: "partnerships", 
           icon: Handshake,
-          content: `<strong>Partnerships with:</strong>
+          content: `Because Web3 is a community-driven ecosystem, we believe in the power of collaboration. We partner with the best actors in the ecosystem and give access to precious ressources to all our Incubator nominees.
+          
+          <strong>Partnerships with:</strong>
 
 • Prominent Web3 entities
 • Media outlets
@@ -299,11 +303,12 @@ Organized as a DAO, including:
           title: "Fund Transparency & Tracking", 
           id: "transparency", 
           icon: LineChart,
-          content: `<strong>Comprehensive tracking and transparency:</strong>
+          content: `Buildr secure the funds of all ventures whith a escrow service to guarantee efficiency and transparency in every steps of the venture, from reward distribution to post-launch governance.
+          
+          <strong>Full tracking and transparency:</strong>
 
 • Blockchain-based fund management
 • Real-time reporting
-• Automated accountability
 • Public dashboards
 • Smart contract escrow services`
         },
@@ -318,13 +323,17 @@ Organized as a DAO, including:
           title: "$BUILDR Token Utility", 
           id: "token-utility", 
           icon: Coins,
-          content: `<strong>$BUILDR token provides:</strong>
+          content: `The best way to incentivize the community is to give them a voice in the project. The $BUILDR token is the key to the DAO governance, allowing the community to vote on the projects and the builders. $BUILDR is also designed to be used as investement token, allowing investors to get early exposure and equity in launching projects.
+          
+          <strong>$BUILDR token provides:</strong>
 
 • DAO governance rights
 • Exclusive project investment opportunities
 • Community rewards
 • Builder incentives
-• Event-driven giveaways`
+• Event-driven giveaways
+
+As we want to make the $BUILDR token as liquid as possible, all actors will receive pBUILDR (Buildr Points) before TGE. Accumulating pBUILDR guarantees airdrops and rewards in the future. Every pBUILDR will be convertable to $BUILDR at TGE.`
         },
         { 
           title: "Token Distribution & Vesting", 
@@ -344,10 +353,10 @@ Organized as a DAO, including:
           content: `<strong>Staking mechanisms:</strong>
 
 • Governance participation
-• Reward multipliers
-• Exclusive access to projects
+• Early investement opportunities
 • Community voting power
-• Platform fee sharing`
+• Platform fee sharing
+• Equity redistribution`
         },
       ],
     },
@@ -369,13 +378,13 @@ Organized as a DAO, including:
 <strong>Q2 2025:</strong>
 
 • MVP platform release
-• AI evaluation algorithms
 • DAO governance mechanisms
 • First round of onboarding
+• Incubator program launch
 
 <strong>Q3 2025:</strong>
 
-• Incubator program launch
+• Investment pool launch
 • Strategic partnerships
 • Public beta launch
 • Blockchain fund transparency
@@ -383,7 +392,6 @@ Organized as a DAO, including:
 <strong>Q4 2025:</strong>
 
 • Security and legal audit infrastructure
-• AI evaluation enhancement
 • Official ecosystem launch
 • Token Generation Event`
         },
@@ -395,7 +403,6 @@ Organized as a DAO, including:
 
 • Scaling Buildr Incubator
 • Enhanced DAO governance
-• Platform AI improvements
 • Blockchain tool development
 • Global market expansion`
         },
@@ -411,7 +418,7 @@ Organized as a DAO, including:
           id: "general-faqs", 
           icon: MessageSquare,
           content: `<strong>What exactly is Buildr?</strong>
-Buildr is a Web3 launchpad and incubator platform connecting Financiers, Builders, and Community members, streamlining blockchain project creation, funding, and growth through AI-powered evaluations and decentralized governance.
+Buildr is a Web3 launchpad and incubator platform connecting Financiers, Builders, and Community members, streamlining blockchain project creation, funding, and decentralized governance.
 
 <strong>Who can benefit from using Buildr?</strong>
 Founders, influential KOLs, DeFi whales, DAOs, blockchain developers, product managers, UX/UI designers, tech enthusiasts, early adopters, and investors all benefit directly through equity, rewards, and meaningful participation.
@@ -425,9 +432,6 @@ You can join by registering through our dedicated landing pages for Financiers, 
           icon: Code,
           content: `<strong>How is transparency ensured in Buildr?</strong>
 Buildr uses blockchain-based smart contracts for complete fund transparency, real-time reporting, and automated accountability through an accessible blockchain explorer and public dashboards.
-
-<strong>How are projects evaluated?</strong>
-Projects undergo AI-driven initial and secondary evaluations, considering market trends, social presence, economic viability, innovative potential, and technical robustness.
 
 <strong>How does the DAO influence decisions?</strong>
 The DAO actively participates in pre-selection, validation, equity distribution, governance, and the strategic direction of projects through transparent voting mechanisms.`
@@ -480,7 +484,8 @@ Investors have flexible entry and exit options in the investment pools before fi
                 onSectionChange={setActiveSection}
                 expandedSections={expandedSections}
                 onToggleSection={handleToggleSection}
-                className="pt-12"
+                className="pt-4"
+                setIsOpen={setIsOpen}
               />
             </SheetContent>
           </Sheet>
@@ -526,6 +531,14 @@ Investors have flexible entry and exit options in the investment pools before fi
                     Community
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                    href="/docs"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
+                  >
+                    Docs
+                  </Link>
+                </li>
                 <li className="ml-1">
                   <Link 
                     href="https://x.com/buildr_network"
@@ -557,6 +570,7 @@ Investors have flexible entry and exit options in the investment pools before fi
               onSectionChange={setActiveSection}
               expandedSections={expandedSections}
               onToggleSection={handleToggleSection}
+              setIsOpen={setIsOpen}
             />
           </div>
         </div>
@@ -575,7 +589,7 @@ Investors have flexible entry and exit options in the investment pools before fi
                     {section.subsections.map((subsection) => (
                       <div key={subsection.id} id={subsection.id} className="mb-12">
                         <h2 className="text-2xl font-semibold mb-6 text-primary/90">
-                          {subsection.displayTitle || subsection.title === "Mission & Vision" ? "BUILDR is the Y Combinator killer for Web3." : subsection.title}
+                          {subsection.displayTitle || subsection.title}
                         </h2>
                         <div className="px-1">
                           <div 
@@ -602,7 +616,8 @@ function DocsSidebar({
   onSectionChange, 
   expandedSections,
   onToggleSection,
-  className 
+  className,
+  setIsOpen
 }: DocsSidebarProps) {
   return (
     <div className={cn("h-full flex flex-col", className)}>
@@ -637,6 +652,10 @@ function DocsSidebar({
                           className="w-full justify-start text-sm font-normal group"
                           onClick={() => {
                             document.getElementById(subsection.id)?.scrollIntoView({ behavior: "smooth" });
+                            // Close mobile menu only when clicking a subsection
+                            if (window.innerWidth < 768) {
+                              setIsOpen(false);
+                            }
                           }}
                         >
                           {subsection.title}

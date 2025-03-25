@@ -67,7 +67,7 @@ export default function FinanciersPage() {
           <div className="flex gap-8 py-10 lg:py-20 items-center justify-center flex-col w-full">
             <div>
               <Link href="/docs">
-                <Button variant="secondary" size="sm" className="gap-2 text-xs md:text-sm whitespace-nowrap px-3 py-1.5">
+                <Button variant="secondary" size="sm" className="gap-2 text-xs md:text-sm whitespace-nowrap px-3 py-1.5 mt-20">
                   Project Overview<MoveRight className="w-3 h-3" />
                 </Button>
               </Link>

@@ -84,6 +84,14 @@ export default function HomePage() {
                     Community
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                    href="/docs"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-white/20 transition-all hover:aurora-text text-foreground font-medium"
+                  >
+                    Docs
+                  </Link>
+                </li>
                 <li className="ml-1">
                   <Link 
                     href="https://x.com/buildr_network"
