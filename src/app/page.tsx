@@ -270,13 +270,13 @@ export default function HomePage() {
 
             {/* Cards Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
-              <div className="w-full">
+              <div className="w-full mx-auto">
                 <BuildrCard variant="builders" />
               </div>
-              <div className="w-full">
+              <div className="w-full mx-auto">
                 <BuildrCard variant="financiers" />
               </div>
-              <div className="w-full">
+              <div className="w-full mx-auto">
                 <BuildrCard variant="community" />
               </div>
             </div>
@@ -284,19 +284,19 @@ export default function HomePage() {
             {/* Pain section */}
             <div className="w-full mx-auto mt-20">
               <div className="flex justify-center w-full">
-                <h2 className="text-4xl md:text-4xl font-bold text-center mb-10 inline-flex items-center gap-2 px-4">
+                <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 inline-flex items-center gap-2 px-4">
                   Without Buildr
                 </h2>
               </div>
               <div className="flex justify-center w-full">
-                <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                <h2 className="text-2xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
                   Blockchain projects lack Community involvement & Professional support in their early stages...
                 </h2>
               </div>
 
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
                 {/* Première carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                    <div className="p-3 rounded-lg aurora-bg">
                     <CircleOff className="w-6 h-6 text-white" />
@@ -320,17 +320,17 @@ export default function HomePage() {
                 />
 
                 {/* Deuxième carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-lg aurora-bg">
                       <TrendingUpDown className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold">VC dominance & <br></br>Retail exclusion</h3>
+                    <h3 className="text-xl font-semibold">VC dominance & Retail exclusion</h3>
                   </div>
                   <ul className="space-y-4">
-                    <li className="text-muted-foreground">ICO market is at its lowest, with VCs taking the best deals</li>
-                    <li className="text-muted-foreground">VCs provide better support than retail investors can offer</li>
-                    <li className="text-muted-foreground">No trusted intermediary between Financiers, Ventures, and Users</li>
+                    <li className="text-muted-foreground">Venture capital firms control project funding and direction</li>
+                    <li className="text-muted-foreground">Retail investors face high entry barriers and limited access</li>
+                    <li className="text-muted-foreground">Projects prioritize VC interests over community needs</li>
                   </ul>
                 </div>
 
@@ -344,7 +344,7 @@ export default function HomePage() {
                 />
 
                 {/* Troisième carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 rounded-lg aurora-bg">
                     <ThumbsDown className="w-6 h-6 text-white" />
@@ -361,7 +361,16 @@ export default function HomePage() {
 
               {/* Ligne de conclusion */}
               <div className="flex flex-col lg:flex-row items-center justify-center mt-8 pt-8 border-t border-white/20 gap-4 lg:gap-0">
-                <span className="text-muted-foreground text-center">Financiers are waisting money</span>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/triangle.svg"
+                    alt="separator"
+                    width={20}
+                    height={20}
+                    className="lg:hidden w-[20px] h-[20px]"
+                  />
+                  <span className="text-muted-foreground text-center">Financiers are waisting money</span>
+                </div>
                 <Image
                   src="/triangle.svg"
                   alt="separator"
@@ -369,7 +378,16 @@ export default function HomePage() {
                   height={30}
                   className="hidden lg:block w-[30px] h-[30px] mx-8"
                 />
-                <span className="text-muted-foreground text-center">Ventures struggle to scale</span>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/triangle.svg"
+                    alt="separator"
+                    width={20}
+                    height={20}
+                    className="lg:hidden w-[20px] h-[20px]"
+                  />
+                  <span className="text-muted-foreground text-center">Ventures struggle to scale</span>
+                </div>
                 <Image
                   src="/triangle.svg"
                   alt="separator"
@@ -377,25 +395,34 @@ export default function HomePage() {
                   height={30}
                   className="hidden lg:block w-[30px] h-[30px] mx-8"
                 />
-                <span className="text-muted-foreground text-center">Users are exit liquidity</span>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/triangle.svg"
+                    alt="separator"
+                    width={20}
+                    height={20}
+                    className="lg:hidden w-[20px] h-[20px]"
+                  />
+                  <span className="text-muted-foreground text-center">Users are exit liquidity</span>
+                </div>
               </div>
             </div>
             {/* Solution section */}
-            <div className="w-full mx-auto mt-20">
+            <div className="w-full mx-auto mt-10 md:mt-20">
               <div className="flex justify-center w-full">
-                <h2 className="text-4xl md:text-4xl font-bold text-center mb-10 inline-flex items-center gap-2 px-4">
+                <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 inline-flex items-center gap-2 px-4">
                   With Buildr
                 </h2>
               </div>
               <div className="flex justify-center w-full">
-                <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                <h2 className="text-2xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
                   Users co-create & govern projects while <br></br>Ventures & Financiers share <span className="aurora-text">aligned incentives</span> for long run success
                 </h2>
               </div>
 
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
                 {/* Première carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                    <div className="p-3 rounded-lg aurora-bg">
                     <ShieldUser className="w-6 h-6 text-white" />
@@ -419,7 +446,7 @@ export default function HomePage() {
                 />
 
                 {/* Deuxième carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-lg aurora-bg">
                       <Boxes className="w-6 h-6 text-white" />
@@ -443,7 +470,7 @@ export default function HomePage() {
                 />
 
                 {/* Troisième carte */}
-                <div className="flex-1 w-full bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
+                <div className="flex-1 w-[95%] md:w-full mx-auto bg-white backdrop-blur-sm rounded-lg p-8 border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 rounded-lg aurora-bg">
                     <CircleDollarSign className="w-6 h-6 text-white" />
@@ -471,12 +498,12 @@ export default function HomePage() {
               </div>
             </div>
             {/* How it works section */}
-            <div id="how-it-works" className="w-full mx-auto mt-20">
+            <div id="how-it-works" className="w-full mx-auto mt-10 md:mt-20">
               <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> How it works ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> How it works ?</h2>
               </div>
               <div className="flex justify-center w-full">
-                <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                <h2 className="text-2xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
                 Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
                 </h2>
               </div>
@@ -493,7 +520,7 @@ export default function HomePage() {
               {/* Why Buildr section */}
               <div className="w-full mx-auto mt-20">
               <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> Why Buildr is Better  ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4"> Why Buildr is Better  ?</h2>
               </div>
               <div className="flex justify-center w-full">
                 <Image 

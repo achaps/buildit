@@ -165,14 +165,30 @@ export default function CommunityPage() {
               )}
             </div>
           </div>
-          
-          {/* How it works section */}
-          <div id="how-it-works" className="w-full mx-auto mt-20">
+
+          {/* PoC section */}
+          <div id="poc" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
             </div>
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+              <Image 
+                src="/community-PoC.png"
+                alt="Community PoC"
+                width={1000}
+                height={1000}
+                className="w-[90%] md:w-[70%] h-auto"
+              />
+            </div>
+          </div>
+          
+          {/* Ecosystem section */}
+          <div id="how-it-works" className="w-full mx-auto mt-10 md:mt-20">
+            <div className="flex justify-center w-full">
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
+            </div>
+            <div className="flex justify-center w-full">
+              <h2 className="text-2xl md:text-1xl font-bold text-center mb-10 px-4 max-w-4xl">
                 Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
               </h2>
             </div>
@@ -182,15 +198,15 @@ export default function CommunityPage() {
                 alt="How it works"
                 width={1200}
                 height={1000}
-                className="w-[80%] h-auto"
+                className="w-[95%] md:w-[80%] h-auto"
               />
             </div>
           </div>
 
           {/* Why Buildr section */}
-          <div className="w-full mx-auto mt-20">
+          <div className="w-full mx-auto mt-10 md:mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
             </div>
             <div className="flex justify-center w-full">
               <Image 
@@ -198,7 +214,7 @@ export default function CommunityPage() {
                 alt="Why Buildr"
                 width={1200}
                 height={1000}
-                className="w-[80%] h-auto"
+                className="w-[95%] md:w-[80%] h-auto"
               />
             </div>
           </div>

@@ -169,10 +169,10 @@ export default function BuildersPage() {
           {/* Card section */}
           <div className="w-full max-w-3xl mx-auto mt-20">
               <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
-              <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
+              <h2 className="text-2xl md:text-5xl font-semibold text-left mb-12 px-4">
               Never build for free again.  
               </h2>
-              <h2 className="text-3xl md:text-3xl font-semibold text-left mb-12 px-4">
+              <h2 className="text-2xl md:text-3xl font-semibold text-left mb-12 px-4">
              Our incentive program <span className="aurora-text">rewards Builders for their work</span> whether you get the #1 spot or not.  
               </h2>
                 <div className="flex items-center flex flex-col gap-">
@@ -194,7 +194,7 @@ export default function BuildersPage() {
           {/* How it works section */}
           <div id="how-it-works" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">How it Works ?</h2>
             </div>
             <div className="flex justify-center w-full">
               <Image 
@@ -210,10 +210,10 @@ export default function BuildersPage() {
           {/* Ecosystem section */}
           <div id="how-it-works" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
             </div>
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+              <h2 className="text-2xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
                 Each stakeholders gets rewarded <span className="aurora-text">fairly </span>during all the project lifetime
               </h2>
             </div>
@@ -231,7 +231,7 @@ export default function BuildersPage() {
           {/* Why Buildr section */}
           <div className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
             </div>
             <div className="flex justify-center w-full">
               <Image 

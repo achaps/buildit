@@ -73,7 +73,7 @@ export default function FinanciersPage() {
               </Link>
             </div>
             <div className="flex gap-4 flex-col">
-              <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center">
+              <h1 className="text-4xl md:text-7xl max-w-2xl tracking-tighter text-center">
                 <span className="block text-spektr-cyan-50">Grow your Ecosystem</span>
                 <span className="block font-semibold">at Lightning Speed</span>
               </h1>
@@ -97,7 +97,7 @@ export default function FinanciersPage() {
                     ))}
                   </div>
                   <p className="pl-3 text-sm text-muted-foreground">
-                  <strong className="font-medium text-foreground"> +200 </strong> Builders ready to give life to your projects
+                  <strong className="font-medium text-foreground"> +200 </strong> Builders ready to ship your projects
                   </p>
                 </div>
               )}
@@ -170,10 +170,10 @@ export default function FinanciersPage() {
           {/* Card section */}
           <div className="w-full max-w-3xl mx-auto mt-20">
               <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
-              <h2 className="text-3xl md:text-5xl font-semibold text-left mb-12 px-4">
+              <h2 className="text-2xl md:text-5xl font-semibold text-left mb-12 px-4">
               Launching a project has never been easier.  
               </h2>
-              <h2 className="text-3xl md:text-3xl font-semibold text-left mb-12 px-4">
+              <h2 className="text-2xl md:text-3xl font-semibold text-left mb-12 px-4">
             Share your vision, let top tier <span className="aurora-text"> Builders </span> craft it for you & get your first <span className="aurora-text"> User-Base</span> 
               </h2>
                 <div className="flex items-center flex flex-col gap-4">
@@ -198,7 +198,7 @@ export default function FinanciersPage() {
             {/* PoC section */}
           <div id="poc" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Proof of Concept</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Proof of Concept</h2>
             </div>
             <div className="flex justify-center w-full">
               <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-16 px-4 max-w-4xl">
@@ -219,7 +219,7 @@ export default function FinanciersPage() {
           {/* Ecosystem section */}
           <div id="how-it-works" className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Buildr&apos;s Ecosystem</h2>
             </div>
             <div className="flex justify-center w-full">
               <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-16 px-4 max-w-4xl">
@@ -240,7 +240,7 @@ export default function FinanciersPage() {
           {/* Why Buildr section */}
           <div className="w-full mx-auto mt-20">
             <div className="flex justify-center w-full">
-              <h2 className="text-4xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center inline-flex mb-10 items-center gap-2 px-4">Why Buildr is Better ?</h2>
             </div>
             <div className="flex justify-center w-full">
               <Image 

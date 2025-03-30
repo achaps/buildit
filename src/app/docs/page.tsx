@@ -579,7 +579,7 @@ Investors have flexible entry and exit options in the investment pools before fi
         <div className="flex-1 flex flex-col">
           {/* Main Content */}
           <ScrollArea className="flex-1">
-            <div className="container mx-auto px-6 py-8 max-w-4xl">
+            <div className="container mx-auto px-6 py-8 max-w-4xl w-[95%] md:w-auto">
               <div className="prose prose-slate dark:prose-invert max-w-none">
                 {sections.map((section) => (
                   <div key={section.id} id={section.id} className="mb-16">
