@@ -497,6 +497,61 @@ export default function HomePage() {
                 <span className="text-muted-foreground">Each stakeholders now benefits from a <span className="font-bold">realigned & fair earnings redistrisbution</span>, while maximizing the project added value </span>
               </div>
             </div>
+
+            {/* Launching Pool section */}
+            <div className="w-full max-w-4xl mx-auto mt-20">
+              <Card className="p-8 backdrop-blur-sm bg-white border-white/20 shadow-lg">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12 px-4">
+                  <div className="px-3 py-1 rounded-full aurora-bg">
+                    <span className="text-white text-center text-sm font-medium flex justify-center">Coming Soon</span>
+                  </div>
+                  <h2 className="text-2xl md:text-4xl font-semibold text-center">
+                    Launching Pool
+                  </h2>
+                </div>
+                <div className="flex justify-center w-full">
+                <h2 className="text-2xl md:text-1xl font-bold text-center mb-16 px-4 max-w-4xl">
+                  pump.fun like <span className="aurora-text">tradable private equity</span> for early ventures
+                </h2>
+              </div>
+              <div className="flex items-center flex flex-col gap-">
+                  <div className="flex flex-col gap-4">
+                    <li>
+                      <span className="font-semibold">Invest in early ventures during their pre-launch phase</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">Builders Team livestreams the project creation process</span>
+                    </li>
+                    <li>
+                      <span className="font-semibold">No minimum investment, get equity in the upcoming projects</span>
+                    </li>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-8">
+                  <div className="relative">
+                    <Image
+                      src="/launching-pool.png"
+                      alt="Launching Pool"
+                      width={1200}
+                      height={780}
+                      className="w-full h-auto blur-sm"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <div className="self-end">
+                      <Image
+                        src="/logo-black-big.png"
+                        alt="Buildr Signature"
+                        width={80}
+                        height={30}
+                        className="w-[80px] h-auto opacity-80"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
             {/* How it works section */}
             <div id="how-it-works" className="w-full mx-auto mt-10 md:mt-20">
               <div className="flex justify-center w-full">
