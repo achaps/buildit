@@ -15,7 +15,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Buildr Network - Hackathon reinvented",
-  description: "Our platform connects Founders and Builders in a unique way, making sure every submitted project is rewarded",
+  description: "Our platform connects Financiers, Builders and Community in a unique way, making sure every project becomes a venture",
+  openGraph: {
+    images: [
+      {
+        url: "/home.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Buildr Network - Hackathon reinvented",
+    description: "Our platform connects Financiers, Builders and Community in a unique way, making sure every project becomes a venture",
+    images: ["/home.png"],
+  },
 };
 
 export default function RootLayout({
