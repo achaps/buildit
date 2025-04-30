@@ -541,13 +541,28 @@ Investors have flexible entry and exit options in the investment pools before fi
                 </li>
                 <li className="ml-1">
                   <Link 
+                    href="https://t.me/buildr_network"
+                    target="_blank"
+                    className="flex items-center px-2 py-1.5 sm:px-3 sm:py-2"
+                  >
+                    <Image
+                      src="/telegram-logo.png"
+                      alt="Telegram logo"
+                      width={16}
+                      height={16}
+                      className="opacity-70 hover:opacity-100 transition-opacity w-4 h-4 sm:w-5 sm:h-5"
+                    />
+                  </Link>
+                </li>
+                <li className="ml-1">
+                  <Link 
                     href="https://x.com/buildr_network"
                     target="_blank"
                     className="flex items-center px-2 py-1.5 sm:px-3 sm:py-2"
                   >
                     <Image
                       src="/twitter.png"
-                      alt="Twitter"
+                      alt="Twitter logo"
                       width={16}
                       height={16}
                       className="opacity-70 hover:opacity-100 transition-opacity w-4 h-4 sm:w-5 sm:h-5"
