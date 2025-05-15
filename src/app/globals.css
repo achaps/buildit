@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer base {
   :root {
+  --font-inter: 'Inter', sans-serif;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -44,6 +40,12 @@ body {
     --orange-200: #fed7aa;
     --orange-300: #fdba74;
   }
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@layer base {
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
