@@ -21,7 +21,7 @@ export default function ArenaPage() {
         </div>
         <div className="relative z-10 flex flex-col items-center gap-3 sm:gap-4 mt-4 sm:mt-5 w-full">
           <h1 className="text-[2.1rem] sm:text-[82px] font-medium leading-[2.3rem] sm:leading-[74px] text-center bg-gradient-to-b from-white to-[#3A3DA5] bg-clip-text text-transparent tracking-tight break-words w-full max-w-[95vw] sm:max-w-none">Fuck <Typewriter className="inline" /> <br />We are the new VCs.</h1>
-          <p className="text-white text-[1rem] sm:text-[20px] font-normal leading-[1.7rem] sm:leading-[32px] text-center max-w-[90vw] sm:max-w-[450px]">BUILDR Arena is the ultimate competition where community shape the future of DeFi.</p>
+          <p className="text-white text-[1rem] sm:text-[20px] font-normal leading-[1.7rem] sm:leading-[32px] text-center max-w-[90vw] sm:max-w-[450px]">BUILDR Arena is the ultimate dev competition where community shape the future of DeFi</p>
         </div>
         <div className="absolute left-0 right-0 bottom-0 h-[180px] sm:h-[400px] bg-gradient-to-b from-transparent to-[#050208] z-0" />
       </section>
@@ -29,15 +29,22 @@ export default function ArenaPage() {
       <button className={`flex overflow flex-col gap-4 mt-6 sm:mt-8 w-[160px] sm:w-[200px] mx-auto px-3 py-3 bg-black border-white border text-white text-[10px] sm:text-[8px] ${pressStart2P.className} text-center relative z-20`}>&gt; Arena is Loading...</button>
       {/* Image section */}
       <div className="mt-5 flex justify-center w-full px-2">
-        <div className="relative w-full max-w-[95vw] sm:max-w-none flex justify-center">
-          <div className="absolute -top-20 sm:-top-40 left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:w-[825px] sm: w-[1200px] sm:h-[825px] bg-[#00059A] blur-[60px] sm:blur-[100px] opacity-90 rounded-full" />
-          <div className="relative">
-            <div className="relative">
+        <div className="relative w-full max-w-[95vw] sm:max-w-[1200px] flex justify-center">
+          <div className="absolute -top-20 sm:-top-40 left-1/2 -translate-x-1/2 w-[320px] h-[320px] sm:w-[825px] sm:h-[825px] bg-[#00059A] blur-[60px] sm:blur-[100px] opacity-90 rounded-full" />
+          <div className="relative w-full flex justify-center">
+            <div className="relative max-w-full">
               {/* Rectangle with blur behind the image */}
               <div className="absolute -inset-2 sm:-inset-4 rounded-lg bg-[#00059A] blur-[10px] sm:blur-[20px] opacity-100 z-0"></div>
               {/* White glow on top */}
               <div className="absolute -inset-1 rounded-lg blur-[6px] sm:blur-[10px] bg-white/10 z-10"></div>
-              <Image src="/buildr-arena.png" className="border-0 rounded-lg relative z-20 w-full max-w-[95vw] h-auto" alt="Arena Hero" width={1000} height={500} />
+              <Image 
+                src="/buildr-arena.png" 
+                className="border-0 rounded-lg relative z-20 w-full h-auto mx-auto" 
+                alt="Arena Hero" 
+                width={2200} 
+                height={500}
+                priority
+              />
             </div>
           </div>
         </div>
